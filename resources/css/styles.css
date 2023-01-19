@@ -26,6 +26,13 @@ h1 {
     font-size: 3rem;
 }
 
+h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem;
+    opacity: 1;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,6 +55,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: gray;
+    font-weight: 600;
     padding: 5px 10px ;
     border-bottom: solid 1px gray;
     border-radius: 5px;
@@ -68,17 +76,21 @@ nav ul li a:active {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 7.5rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-main .container {
+.container {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
     margin: 0 25px;
-    width: 1500px;
+    width: 93.75rem;
 }
 
 #intro {
@@ -86,7 +98,7 @@ main .container {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 320px;
+    height: 20rem;
 }
 
 .intro-head {
@@ -94,9 +106,38 @@ main .container {
     width: 100%;
 }
 
-#intro h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin: 1rem;
-    opacity: 1;
+
+#summary h2{
+    color: #000 !important;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1;
+}
+
+.restaurant {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.625rem;
+    margin: 0.625rem;
+    background-color: white;
+    max-width: 21.875rem;
+    max-height: 31.25rem;
+    overflow: hidden;
+    border-radius: 1.25rem;
+}
+
+.restaurant img {
+    width: 31.25rem;
+    height: 90%;
+}
+
+figcaption {
+    padding: 1.5625rem;
 }
