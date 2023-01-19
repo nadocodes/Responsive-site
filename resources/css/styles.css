@@ -90,7 +90,6 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0 25px;
-    width: 93.75rem;
 }
 
 #intro {
@@ -99,6 +98,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     height: 20rem;
+    width: 85%;
 }
 
 .intro-head {
