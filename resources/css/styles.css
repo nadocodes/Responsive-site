@@ -4,20 +4,28 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+}
+
 body {
     font-family: 'Sofia Sans', sans-serif;
     background-color: #f5f5f5;
     text-align: center;
     font-size: 16px;
+    width: 100%;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 10px 0;
     box-shadow: 0 0 5px #ccc;
     position: fixed;
-    width: 100%;
+    justify-content: space-between;
     z-index: 1;
+    width: 100%;
 }
 
 h1 {
@@ -27,10 +35,24 @@ h1 {
 }
 
 h2 {
-    color: #fff;
     font-size: 2rem;
     margin: 1rem;
     opacity: 1;
+}
+
+p {
+    line-height: 1.5;
+    opacity: 1;    
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
 }
 
 nav {
@@ -76,20 +98,18 @@ nav ul li a:active {
 }
 
 main {
-    margin-top: 7.5rem;
+    margin-top: 8rem;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
-    margin: 0 25px;
 }
 
 #intro {
@@ -102,12 +122,17 @@ main {
 }
 
 .intro-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
     background-color: #000;
     width: 100%;
+    margin-top: 7.5rem;
 }
 
 
-#summary h2{
+.summary-intro h2{
     color: #000 !important;
 }
 
@@ -116,7 +141,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1;
 }
 
 .restaurant {
@@ -140,4 +164,65 @@ main {
 
 figcaption {
     padding: 1.5625rem;
+}
+
+.vibes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.625rem;
+    margin: 0.625rem;
+    max-width: 75rem;
+    overflow: clip;
+    border-radius: 1.25rem;
+}
+
+.vibes img {
+    width: 31.25em;
+    height: 90%;
+}
+
+.contact { 
+    width: 75rem;
+    margin: 1.5rem;
+    border-top: 0.3125rem solid #000;
+    border-radius: 0.625rem;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 0.625rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .restaurant {
+        max-width: 31.25rem;
+        max-height: 31.25rem;
+    }
+
+    .restaurant img {
+        width: 31.25rem;
+        height: 90%;
+    }
+
+    .vibes {
+        max-width: 75rem;
+    }
+
+    .vibes img {
+        width: 31.25em;
+        height: 90%;
+    }
+
+    .contact {
+        width: 75rem;
+    }
 }
